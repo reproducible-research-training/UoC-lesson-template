@@ -1,0 +1,6 @@
+.DS_Store
+.quarto/
+/intro_files/
+index.tex
+*.ipynb_checkpoints/
+__pycache__/

@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "index.html#lesson-overview",
+    "href": "index.html#lesson-overview",
+    "title": "Open Lesson Template",
+    "section": "Lesson Overview",
+    "text": "Lesson Overview\n\nDescription\nEnter a summary description of the lesson here. This should be a few sentences long and provide an overview of what the lesson will cover.\n\n\nPrerequisites\nTo be able to follow this course, learners should have knowledge in:\n\nFirst requirement.\n\nSecond requirement.\n\n\n\nLearning Outcomes\nBy the end of the course, learners will be able to:\n\n\nFirst item.\nSecond item.\n\n\n\nTarget Audience\nThis course is aimed at learners who do not have a background in [topic]. It is suitable for researchers, students and professionals.\n\n\nLicence\nCC BY 4.0"
+  },
+  {
+    "objectID": "intro.html#learning-objectives",
+    "href": "intro.html#learning-objectives",
+    "title": "1  Introduction",
+    "section": "1.1 Learning objectives",
+    "text": "1.1 Learning objectives\nBy the end of this lesson, learners will be able to:\n\nDescribe the structure of a Quarto lesson.\nAdd images, tables and code to a chapter.\nUse callouts to highlight tips, warnings and activities."
+  },
+  {
+    "objectID": "intro.html#text-formatting",
+    "href": "intro.html#text-formatting",
+    "title": "1  Introduction",
+    "section": "1.2 Text formatting",
+    "text": "1.2 Text formatting\nYou can write text in bold, italics, inline code, strikethrough and hyperlinks. Footnotes are added like this.1\n\nBlock quotes are useful for highlighting a quotation or a key message."
+  },
+  {
+    "objectID": "intro.html#lists",
+    "href": "intro.html#lists",
+    "title": "1  Introduction",
+    "section": "1.3 Lists",
+    "text": "1.3 Lists\nBullet points:\n\nFirst item\nSecond item\n\nNested item\nAnother nested item\n\nThird item\n\nNumbered steps:\n\nOpen the project in VS Code.\nEdit a .qmd file.\nRun quarto preview to see your changes.\n\nTask list:\n\nWrite the introduction\nAdd exercises\nReview the content"
+  },
+  {
+    "objectID": "intro.html#images",
+    "href": "intro.html#images",
+    "title": "1  Introduction",
+    "section": "1.4 Images",
+    "text": "1.4 Images\nAdd an image with a caption and a label, so that you can cross-reference it as Figure 1.1.\n\n\n\nFigure 1.1: The cover image of this lesson template.\n\n\nAlways add fig-alt alternative text to make images accessible to screen reader users."
+  },
+  {
+    "objectID": "intro.html#tables",
+    "href": "intro.html#tables",
+    "title": "1  Introduction",
+    "section": "1.5 Tables",
+    "text": "1.5 Tables\n\n\nTable 1.1: Common markdown syntax.\n\n\nElement\nSyntax\nUse it for\n\n\n\n\nBold\n**text**\nKey terms\n\n\nCode\n`code`\nCommands and file names\n\n\nLink\n[text](url)\nExternal resources\n\n\n\n\nTable 1.1 summarises the markdown syntax used on this page."
+  },
+  {
+    "objectID": "intro.html#code",
+    "href": "intro.html#code",
+    "title": "1  Introduction",
+    "section": "1.6 Code",
+    "text": "1.6 Code\n\n1.6.1 Executable Python code\nCode in a ```{python} block runs when the book is built, and its output appears below it:\n\nimport pandas as pd\n\ndata = pd.read_csv(\"data/example.csv\")\ndata.head()\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbody_mass_g\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n3750\n\n\n1\nAdelie\nTorgersen\n39.5\n3800\n\n\n2\nAdelie\nBiscoe\n37.8\n3400\n\n\n3\nAdelie\nDream\n40.3\n3250\n\n\n4\nAdelie\nDream\n36.7\n3450\n\n\n\n\n\n\n\nUse #| options at the top of a cell to control it. Here, echo: true shows the code and label/fig-cap turn the plot into a numbered figure, Figure 1.2:\n\nimport matplotlib.pyplot as plt\n\nmeans = data.groupby(\"species\")[\"body_mass_g\"].mean()\n\nfig, ax = plt.subplots(figsize=(6, 3.5))\nmeans.plot.bar(ax=ax, color=\"#4C72B0\")\nax.set_xlabel(\"Species\")\nax.set_ylabel(\"Body mass (g)\")\nplt.xticks(rotation=0)\nplt.show()\n\n\n\n\nFigure 1.2: Average body mass by penguin species.\n\n\n\n\nOther useful cell options:\n\n#| echo: false hides the code and shows only the output.\n#| eval: false shows the code without running it.\n\n\n\n1.6.2 Display-only code\nUse a plain code block (without braces) for code that should be shown but not run, such as terminal commands:\npip install -r requirements.txt\nquarto preview\n\n\n\n\n\n\nNote\n\n\n\nTo build this book, you need Python with the packages listed in requirements.txt. Install them with pip install -r requirements.txt."
+  },
+  {
+    "objectID": "intro.html#equations",
+    "href": "intro.html#equations",
+    "title": "1  Introduction",
+    "section": "1.7 Equations",
+    "text": "1.7 Equations\nInline maths: \\(E = mc^2\\). Display maths with a label, cross-referenced as Equation 1.1:\n\\[\n\\bar{x} = \\frac{1}{n} \\sum_{i=1}^{n} x_i\n\\tag{1.1}\\]"
+  },
+  {
+    "objectID": "intro.html#callouts",
+    "href": "intro.html#callouts",
+    "title": "1  Introduction",
+    "section": "1.8 Callouts",
+    "text": "1.8 Callouts\n\n\n\n\n\n\nNote\n\n\n\nUse a note for extra information.\n\n\n\n\n\n\n\n\nTip\n\n\n\nUse a tip for helpful advice or shortcuts.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nUse a warning for common mistakes to avoid.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nUse this for information learners must not miss.\n\n\n\n\n\n\n\n\nClick to expand\n\n\n\n\n\nCollapsible callouts are useful for hints and solutions."
+  },
+  {
+    "objectID": "intro.html#tabsets",
+    "href": "intro.html#tabsets",
+    "title": "1  Introduction",
+    "section": "1.9 Tabsets",
+    "text": "1.9 Tabsets\nTabsets are useful for showing the same task in different languages. The Python tab runs; the R tab is display-only, because a page can only use one kernel.\n\nPythonR\n\n\n\nprint(\"Hello, world!\")\n\nHello, world!\n\n\n\n\nprint(\"Hello, world!\")\n\n\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "intro.html#activities",
+    "href": "intro.html#activities",
+    "title": "1  Introduction",
+    "section": "1.10 Activities",
+    "text": "1.10 Activities\nThe following activity is a practical example of an exercise callout: Activity 1.\n\n\n\n\n\n\nData exploration\n\n\n\nUse this exercise to apply the concepts introduced in this lesson.\n\nLoad the example dataset.\nCount the number of rows and columns.\nDescribe one pattern you notice.\n\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "intro.html#footnotes",
+    "href": "intro.html#footnotes",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "Footnotes appear at the bottom of the page (or chapter, in the PDF).↩︎"
+  }
+]

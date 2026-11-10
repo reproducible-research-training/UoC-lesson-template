@@ -1,0 +1,3 @@
+## Citation {.unnumbered}
+If you use this template, please cite as:
+    *CITATION_CFF*

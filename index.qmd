@@ -1,0 +1,61 @@
+---
+contributors-page: true
+---
+
+<!--  this script is used to move the contributors list to the authors section of the book and to show multiple authors as comma separated list.  -->
+<script>
+const contributors = document.querySelector('#contributors-list');
+const authorsHeading = Array.from(document.querySelectorAll('.quarto-title-meta-heading'))
+	.find((heading) => heading.textContent.trim() === 'Authors');
+const authorsContents = authorsHeading?.nextElementSibling;
+if (authorsContents) {
+	const authorParagraphs = Array.from(authorsContents.querySelectorAll('p'));
+	if (authorParagraphs.length > 1) {
+		const combinedAuthors = document.createElement('p');
+		combinedAuthors.innerHTML = authorParagraphs.map((paragraph) => paragraph.innerHTML.trim()).join(', ');
+		authorsContents.replaceChildren(combinedAuthors);
+	}
+}
+const authorsBlock = authorsHeading?.parentElement;
+if (contributors && authorsBlock) {
+	authorsBlock.appendChild(contributors);
+}
+</script>
+
+<script>
+const creditStatement = document.querySelector('details');
+const abstract = document.querySelector('#title-block-header .abstract');
+if (creditStatement && abstract) {
+	abstract.parentElement.insertBefore(creditStatement, abstract);
+}
+</script>
+
+
+## Lesson Overview {.unnumbered}
+
+#### Description
+Enter a summary description of the lesson here. This should be a few sentences long and provide an overview of what the lesson will cover.
+
+
+#### Prerequisites
+To be able to follow this course, learners should have knowledge in:
+
+1. First requirement.  
+2. Second requirement.
+
+#### Learning Outcomes
+By the end of the course, learners will be able to:</p>
+1. First item.
+2. Second item.
+
+#### Target Audience
+This course is aimed at learners who do not have a background in [topic]. It is suitable for researchers, students and professionals.
+
+#### Licence
+LICENSE_QUARTO
+
+
+
+
+
+

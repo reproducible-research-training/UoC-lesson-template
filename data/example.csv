@@ -1,0 +1,15 @@
+species,island,bill_length_mm,body_mass_g
+Adelie,Torgersen,39.1,3750
+Adelie,Torgersen,39.5,3800
+Adelie,Biscoe,37.8,3400
+Adelie,Dream,40.3,3250
+Adelie,Dream,36.7,3450
+Chinstrap,Dream,46.5,3500
+Chinstrap,Dream,50.0,3900
+Chinstrap,Dream,51.3,3650
+Chinstrap,Dream,45.4,3525
+Gentoo,Biscoe,46.1,4500
+Gentoo,Biscoe,50.0,5700
+Gentoo,Biscoe,48.7,4450
+Gentoo,Biscoe,50.0,5550
+Gentoo,Biscoe,47.6,4875

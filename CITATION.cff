@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this template, please cite it as below."
+title: "Open Lesson Template"
+type: software
+authors:
+  - given-names: Alexia
+    family-names: Cardona
+    orcid: "https://orcid.org/0000-0002-7877-5565"
+year: 2026
+license: CC-BY-4.0

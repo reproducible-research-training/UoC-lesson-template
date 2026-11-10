@@ -1,0 +1,180 @@
+# Introduction
+
+This is a book created from markdown and executable code. This page also works as a **reference of common content elements**: copy any of the examples below into your own chapters and adapt them.
+
+See @knuth84 for additional discussion of literate programming.
+
+## Learning objectives
+
+By the end of this lesson, learners will be able to:
+
+- Describe the structure of a Quarto lesson.
+- Add images, tables and code to a chapter.
+- Use callouts to highlight tips, warnings and activities.
+
+## Text formatting
+
+You can write text in **bold**, *italics*, `inline code`, ~~strikethrough~~ and [hyperlinks](https://quarto.org). Footnotes are added like this.[^1]
+
+[^1]: Footnotes appear at the bottom of the page (or chapter, in the PDF).
+
+> Block quotes are useful for highlighting a quotation or a key message.
+
+## Lists
+
+Bullet points:
+
+- First item
+- Second item
+  - Nested item
+  - Another nested item
+- Third item
+
+Numbered steps:
+
+1. Open the project in VS Code.
+2. Edit a `.qmd` file.
+3. Run `quarto preview` to see your changes.
+
+Task list:
+
+- [x] Write the introduction
+- [ ] Add exercises
+- [ ] Review the content
+
+## Images
+
+Add an image with a caption and a label, so that you can cross-reference it as @fig-cover.
+
+![The cover image of this lesson template.](images/rrcam-logo.webp){#fig-cover width=60% fig-alt="Cover image of the lesson template"}
+
+Always add `fig-alt` alternative text to make images accessible to screen reader users.
+
+## Tables
+
+| Element  | Syntax           | Use it for                    |
+|----------|------------------|-------------------------------|
+| Bold     | `**text**`       | Key terms                     |
+| Code     | `` `code` ``     | Commands and file names       |
+| Link     | `[text](url)`    | External resources            |
+
+: Common markdown syntax. {#tbl-syntax}
+
+@tbl-syntax summarises the markdown syntax used on this page.
+
+## Code
+
+### Executable Python code
+
+Code in a ```` ```{python} ```` block runs when the book is built, and its output appears below it:
+
+```{python}
+import pandas as pd
+
+data = pd.read_csv("data/example.csv")
+data.head()
+```
+
+Use `#|` options at the top of a cell to control it. Here, `echo: true` shows the code and `label`/`fig-cap` turn the plot into a numbered figure, @fig-body-mass:
+
+```{python}
+#| label: fig-body-mass
+#| fig-cap: "Average body mass by penguin species."
+#| fig-alt: "Bar chart of average body mass for Adelie, Chinstrap and Gentoo penguins."
+#| echo: true
+import matplotlib.pyplot as plt
+
+means = data.groupby("species")["body_mass_g"].mean()
+
+fig, ax = plt.subplots(figsize=(6, 3.5))
+means.plot.bar(ax=ax, color="#4C72B0")
+ax.set_xlabel("Species")
+ax.set_ylabel("Body mass (g)")
+plt.xticks(rotation=0)
+plt.show()
+```
+
+Other useful cell options:
+
+- `#| echo: false` hides the code and shows only the output.
+- `#| eval: false` shows the code without running it.
+
+### Display-only code
+
+Use a plain code block (without braces) for code that should be shown but not run, such as terminal commands:
+
+```bash
+pip install -r requirements.txt
+quarto preview
+```
+
+::: {.callout-note}
+To build this book, you need Python with the packages listed in `requirements.txt`. Install them with `pip install -r requirements.txt`.
+:::
+
+## Equations
+
+Inline maths: $E = mc^2$. Display maths with a label, cross-referenced as @eq-mean:
+
+$$
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+$$ {#eq-mean}
+
+## Callouts
+
+::: {.callout-note}
+## Note
+Use a note for extra information.
+:::
+
+::: {.callout-tip}
+## Tip
+Use a tip for helpful advice or shortcuts.
+:::
+
+::: {.callout-warning}
+## Warning
+Use a warning for common mistakes to avoid.
+:::
+
+::: {.callout-important}
+## Important
+Use this for information learners must not miss.
+:::
+
+::: {.callout-caution collapse="true"}
+## Click to expand
+Collapsible callouts are useful for hints and solutions.
+:::
+
+## Tabsets
+
+Tabsets are useful for showing the same task in different languages. The Python tab runs; the R tab is display-only, because a page can only use one kernel.
+
+::: {.panel-tabset}
+## Python
+
+```{python}
+print("Hello, world!")
+```
+
+## R
+
+```r
+print("Hello, world!")
+```
+:::
+
+<!-- ## Activities
+
+The following activity is a practical example of an exercise callout: [Activity 1](#exr-first-activity).
+
+::: {.callout-tip .callout-activity #exr-first-activity activity-number="1" title="Data exploration" level="intermediate"}
+
+Use this exercise to apply the concepts introduced in this lesson.
+
+1. Load the example dataset.
+2. Count the number of rows and columns.
+3. Describe one pattern you notice.
+
+::: -->

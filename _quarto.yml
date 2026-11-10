@@ -1,0 +1,59 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Open Lesson Template"
+  author: 
+  - name: "Alexia Cardona"
+    orcid: "0000-0002-7877-5565"
+    roles: ["Conceptualization", "Methodology", "Software", "Writing - Original Draft"]
+  - name: "A B"
+    orcid: "0000-0000-0000-0000"
+    roles: ["Data Curation", "Investigation", "Writing - Review & Editing"]
+ 
+  license: "CC BY 4.0"
+
+
+  sidebar:
+    logo: images/uoc-logo.png
+    title: "Lesson Template"
+    border: true
+
+  page-footer:
+    center: |
+      ![RRCam logo](images/rrcam-logo.webp){width=24px} Enabling Reproducible Research. Join our training courses [here](https://www.reproducibleresearchcambridge.co.uk/).
+
+    
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - citation.qmd
+    - references.qmd
+
+contributors:
+  - name: "Mary Smith"
+    orcid: "0000-0000-0000-0000"
+  - name: "John Doe"
+    orcid: "0000-0000-0000-0000"
+
+
+
+bibliography: references.bib
+
+execute:
+  freeze: auto
+
+format:
+  html:
+    theme: default
+    css: styles.css
+    include-after-body: activity.js
+    filters:
+      - contributors.lua
+  pdf:
+    documentclass: scrreprt
+
+
+
