@@ -52,8 +52,3 @@ format:
     include-after-body: activity.js
     filters:
       - contributors.lua
-  pdf:
-    documentclass: scrreprt
-
-
-

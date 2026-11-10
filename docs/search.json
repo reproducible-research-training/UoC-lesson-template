@@ -70,17 +70,31 @@
     "text": "1.9 Tabsets\nTabsets are useful for showing the same task in different languages. The Python tab runs; the R tab is display-only, because a page can only use one kernel.\n\nPythonR\n\n\n\nprint(\"Hello, world!\")\n\nHello, world!\n\n\n\n\nprint(\"Hello, world!\")\n\n\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
   },
   {
-    "objectID": "intro.html#activities",
-    "href": "intro.html#activities",
-    "title": "1  Introduction",
-    "section": "1.10 Activities",
-    "text": "1.10 Activities\nThe following activity is a practical example of an exercise callout: Activity 1.\n\n\n\n\n\n\nData exploration\n\n\n\nUse this exercise to apply the concepts introduced in this lesson.\n\nLoad the example dataset.\nCount the number of rows and columns.\nDescribe one pattern you notice.\n\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
     "objectID": "intro.html#footnotes",
     "href": "intro.html#footnotes",
     "title": "1  Introduction",
     "section": "",
     "text": "Footnotes appear at the bottom of the page (or chapter, in the PDF).↩︎"
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "citation.html",
+    "href": "citation.html",
+    "title": "Citation",
+    "section": "",
+    "text": "If you use this template, please cite as: Open Lesson Template, Cardona 2026"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
   }
 ]
